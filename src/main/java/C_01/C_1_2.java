@@ -2,7 +2,6 @@ package C_01;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.BiFunction;
 
 /**
  * Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
@@ -29,13 +28,13 @@ public class C_1_2 {
         char[] str1CharArr = str1.toCharArray();
         char[] str2CharArr = str2.toCharArray();
         for (int i = 0; i < str1CharArr.length; i++) {
-            Integer str1CharCount = check1.computeIfAbsent((int)str1CharArr[i], V -> 0);
-            Integer str2CharCount = check2.computeIfAbsent((int)str2CharArr[i], V -> 0);
+            int str1CharCount = check1.computeIfAbsent((int)str1CharArr[i], V -> 0);
+            int str2CharCount = check2.computeIfAbsent((int)str2CharArr[i], V -> 0);
             str1CharCount++;
             str2CharCount++;
         }
 
-        if (check1.size() != check1.size()) {
+        if (check1.size() != check2.size()) {
             return false;
         }
 
