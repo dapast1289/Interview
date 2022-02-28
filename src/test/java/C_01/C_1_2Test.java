@@ -15,7 +15,7 @@ class C_1_2Test {
     }
 
     @Test
-    void isPermutation_return_false_by_special_case() {
+    void isPermutation_return_false_by_duplicate_char() {
         C_1_2 c_1_2 = new C_1_2();
         String str1 = "abaadddc";
         String str2 = "ddbaadcc";
@@ -33,7 +33,7 @@ class C_1_2Test {
     }
 
     @Test
-    void isPermutation_return_true_by_special_case() {
+    void isPermutation_return_true_by_duplicate_char() {
         C_1_2 c_1_2 = new C_1_2();
         String str1 = "aabbcdd";
         String str2 = "ddaacbb";
