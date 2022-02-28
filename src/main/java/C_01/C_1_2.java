@@ -9,10 +9,11 @@ import java.util.Map;
  * Hints: #1, #84, #122, #131
  */
 public class C_1_2 {
+
     public static void main(String[] args) {
         C_1_2 c_1_2 = new C_1_2();
-        String str1 = "sdosssg";
-        String str2 = "godsss";
+        String str1 = "sdossg";
+        String str2 = "godsds";
         boolean answer = c_1_2.isPermutation(str1, str2);
         System.out.println("answer: " + answer);
     }
@@ -28,10 +29,13 @@ public class C_1_2 {
         char[] str1CharArr = str1.toCharArray();
         char[] str2CharArr = str2.toCharArray();
         for (int i = 0; i < str1CharArr.length; i++) {
-            int str1CharCount = check1.computeIfAbsent((int)str1CharArr[i], V -> 0);
-            int str2CharCount = check2.computeIfAbsent((int)str2CharArr[i], V -> 0);
-            str1CharCount++;
-            str2CharCount++;
+            check1.get((int)str1CharArr[i]);
+            Integer str1CharCount = check1.computeIfAbsent((int)str1CharArr[i], V -> 0);
+            Integer str2CharCount = check2.computeIfAbsent((int)str2CharArr[i], V -> 0);
+            str1CharCount = str1CharCount + 1;
+            str2CharCount = str2CharCount + 1;
+            check1.put((int)str1CharArr[i], str1CharCount);
+            check2.put((int)str2CharArr[i], str2CharCount);
         }
 
         if (check1.size() != check2.size()) {
