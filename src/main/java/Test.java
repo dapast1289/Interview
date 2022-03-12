@@ -21,6 +21,6 @@ public class Test {
     public int setBit(int num, int i) {
         return num | (1 << i);
     }
-    
+
 
 }
