@@ -8,14 +8,31 @@ import java.util.Map;
  *
  * Hints: #1, #84, #122, #131
  */
-public class C_1_2 {
+public class C_1_2_mySolution {
 
     public static void main(String[] args) {
-        C_1_2 c_1_2 = new C_1_2();
+        C_1_2_mySolution c_1_2MySolution = new C_1_2_mySolution();
         String str1 = "sdossg";
         String str2 = "godsds";
-        boolean answer = c_1_2.isPermutation(str1, str2);
+//        boolean answer = c_1_2MySolution.isPermutation(str1, str2);
+        boolean answer = c_1_2MySolution.permutation(str1, str2);
         System.out.println("answer: " + answer);
+        char t = 'a';
+        char t1 = 97;
+        System.out.println((int)t);
+        System.out.println(t1);
+    }
+
+    // standard solution
+    public boolean permutation(String str1, String str2) {
+        if (str1.length() != str2.length()) return false;
+        int[] check = new int[128];
+        for (int i = 0; i < str1.length(); i ++) {
+//            System.out.println(str1.charAt(i));
+        }
+
+
+        return true;
     }
 
     public boolean isPermutation(String str1, String str2) {
