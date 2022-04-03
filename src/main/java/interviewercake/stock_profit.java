@@ -10,19 +10,16 @@ public class stock_profit {
 
     public static int getMaxProfit(int stockPrices[]) {
         int min = stockPrices[0];
-        int max = stockPrices[1];
-        if (min > max) {
-            int temp = min;
-            min = max;
-            max = temp;
-        }
-        for (int i = 2; i < stockPrices.length; i++) {
-            if (stockPrices[i] < min) {
+        int maxProfit = 0;
+        for (int i = 1; i < stockPrices.length; i++) {
+            if (min > stockPrices[i]) {
                 min = stockPrices[i];
-            } else if (stockPrices[i] > max) {
-                max = stockPrices[i];
+            }
+            int currentProfit = stockPrices[i] - min;
+            if (currentProfit > maxProfit) {
+                maxProfit = currentProfit;
             }
         }
-        return max - min;
+        return maxProfit;
     }
 }
