@@ -9,8 +9,8 @@ public class RotateTheNumber {
     }
 
     public static boolean isValid(String inputStr) {
-        char input[] = inputStr.toCharArray();
-        char output[] = new char[input.length];
+        char[] input = inputStr.toCharArray();
+        char[] output = new char[input.length];
         for (int i = 0; i < input.length; i++) {
             int outputIdx = input.length - 1 - i;
             if (input[i] != '0' && input[i] != '1' && input[i] != '6' && input[i] != '8' && input[i] != '9') {
