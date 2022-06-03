@@ -1,6 +1,21 @@
 package leetcode;
 
+import java.util.List;
+
 public class L148 {
+
+    public static void main(String[] args) {
+//        [4,2,1,3]
+        ListNode arr = new ListNode(4, new ListNode(2, new ListNode(1, new ListNode(3))));
+        L148 l148 = new L148();
+        l148.sortList(arr);
+        while (arr != null) {
+            System.out.print(arr.val + ", ");
+            arr = arr.next;
+        }
+        System.out.println("");
+        System.out.println("expected: 1, 2, 3, 4");
+    }
     public ListNode sortList(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
