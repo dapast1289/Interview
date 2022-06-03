@@ -17,7 +17,7 @@ public class SortList {
     public ListNode sortList(ListNode head) {
         int length = getLength(head);
         buildHeap(head, length);
-        for (int i = length - 1; i > 0; i--) {
+        for(int i = length - 1; i > 0; i--) {
             swap(head, 0, i);
             heapify(head, i, 0);
         }
@@ -73,7 +73,7 @@ public class SortList {
 
     public ListNode getNode(ListNode head, int i) {
         ListNode cur = head;
-        for (; i > 0; i--) {
+        for (;i > 0; i--) {
             cur = cur.next;
         }
         return cur;
