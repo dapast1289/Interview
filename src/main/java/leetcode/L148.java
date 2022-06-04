@@ -8,7 +8,7 @@ public class L148 {
 //        [4,2,1,3]
         ListNode arr = new ListNode(4, new ListNode(2, new ListNode(1, new ListNode(3))));
         L148 l148 = new L148();
-        l148.sortList(arr);
+        arr = l148.sortList(arr);
         while (arr != null) {
             System.out.print(arr.val + ", ");
             arr = arr.next;
@@ -25,11 +25,14 @@ public class L148 {
             slow = slow.next;
             fast = fast.next.next;
         }
+        if (slow == fast) {
+            return head;
+        }
         p.next = null;
         ListNode l1 = sortList(head);
         ListNode l2 = sortList(slow);
-        merge(l1, l2);
-        return head;
+        ListNode result = merge(l1, l2);
+        return result;
     }
 
     public ListNode merge(ListNode listNode1, ListNode listNode2) {
