@@ -3,7 +3,11 @@ package leetcode;
 public class L056 {
 
     public static void main(String[] args) {
-        int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+        //{{2,3},{2,2},{3,3},{1,3},{5,7},{2,2},{4,6}}
+        //{{1,4},{0,2},{3,5}}
+        //{{1,3},{2,6},{8,10},{15,18}}
+        //{{1,4},{2,3}}
+        int[][] intervals = {{2,3},{2,2},{3,3},{1,3},{5,7},{2,2},{4,6}};
         L056 l056 = new L056();
         int[][] result = l056.merge(intervals);
         l056.print(result);
@@ -40,24 +44,26 @@ public class L056 {
                     i = j;
                     count++;
                 }
+            } else {
+                i = j;
             }
         }
 
         // generate result
-        // int[][] result = new int[(intervals.length - count/2)][2];
-        // int ri = 0, rj = 0;
-        // for (int[] nums : intervals) {
-        //     for (int num : nums) {
-        //         if (num != -1) {
-        //             result[ri][rj] = num;
-        //             rj++;
-        //             if (rj == 2) {
-        //                 ri++;
-        //                 rj = 0;
-        //             }
-        //         }
-        //     }
-        // }
+         int[][] result = new int[(intervals.length - count/2)][2];
+         int ri = 0, rj = 0;
+         for (int[] nums : intervals) {
+             for (int num : nums) {
+                 if (num != -1) {
+                     result[ri][rj] = num;
+                     rj++;
+                     if (rj == 2) {
+                         ri++;
+                         rj = 0;
+                     }
+                 }
+             }
+         }
         return intervals;
     }
 
