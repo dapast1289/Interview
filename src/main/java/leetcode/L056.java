@@ -3,7 +3,17 @@ package leetcode;
 public class L056 {
 
     public static void main(String[] args) {
+        int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+        L056 l056 = new L056();
+        int[][] result = l056.merge(intervals);
+        l056.print(result);
+    }
 
+    public void print(int[][] arr) {
+        for (int[] i : arr) {
+            System.out.print(i[0] + ", " + i[1] + ", ");
+        }
+        System.out.println();
     }
 
     public int[][] merge(int[][] intervals) {
@@ -24,6 +34,7 @@ public class L056 {
             mergeSort(arr, left, mid);
             mergeSort(arr, mid + 1, right);
             merge(arr, left, mid, right);
+            print(arr);
         }
     }
 
@@ -53,8 +64,8 @@ public class L056 {
                 i2++;
             }
             if (j3 == 2) {
-                j2 = 0;
-                i2++;
+                j3 = 0;
+                i3++;
             }
         }
         // add remained value
@@ -67,8 +78,8 @@ public class L056 {
                 i1++;
             }
             if (j3 == 2) {
-                j2 = 0;
-                i2++;
+                j3 = 0;
+                i3++;
             }
         }
         while (i2 <= right) {
@@ -80,14 +91,15 @@ public class L056 {
                 i2++;
             }
             if (j3 == 2) {
-                j2 = 0;
-                i2++;
+                j3 = 0;
+                i3++;
             }
         }
         // replace
         for (int[] ints : result) {
             arr[left][0] = ints[0];
             arr[left][1] = ints[1];
+            left++;
         }
     }
 
