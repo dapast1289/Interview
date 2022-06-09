@@ -15,8 +15,11 @@ public class Practice {
         stack.offer("3");
         stack.offer("4");
         stack.offer("5");
-        stack.add("6");
 
+        stack.poll();
+        stack.add("6");
+        stack.push("7");
+        stack.isEmpty()
         assertEquals("second", stack.poll());
         System.out.println();
     }
