@@ -1,7 +1,9 @@
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -9,17 +11,9 @@ public class Practice {
 
     @Test
     public void whenPush_addsAtFirst() {
-        ArrayDeque<String> stack = new ArrayDeque<>();
-//        stack.push("1");
-//        stack.push("2");
-        stack.offer("3");
-        stack.offer("4");
-        stack.offer("5");
-
-        stack.poll();
-        stack.add("6");
-        stack.push("7");
-        assertEquals("second", stack.poll());
-        System.out.println();
+        int i = 1;
+        i =+ 1;
+        System.out.println(i);
+        char a = '1';
     }
 }
