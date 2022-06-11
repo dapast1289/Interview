@@ -19,7 +19,6 @@ public class Practice {
         stack.poll();
         stack.add("6");
         stack.push("7");
-        stack.isEmpty()
         assertEquals("second", stack.poll());
         System.out.println();
     }
