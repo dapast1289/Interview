@@ -58,10 +58,9 @@ public class L077 {
     int count = 0;
     public void print(List<List<Integer>> combs, List<Integer> comb, int start, int n, int k) {
         String combsStr = "[";
-        for (int i = 0; i < combs.size(); i++) {
+        for (List<Integer> i : combs) {
             combsStr += "[";
-            List<Integer> list = combs.get(i);
-            for (int j = 0; j < list.size(); j++) {
+            for (Integer j : i) {
                 combsStr += j + ", ";
             }
             combsStr = combsStr.substring(0, combsStr.length() - 2);
@@ -73,7 +72,7 @@ public class L077 {
         combsStr += "]";
 
         String combStr = "[";
-        for (int j = 0; j < comb.size(); j++) {
+        for (Integer j : comb) {
             combStr += j + ", ";
         }
         if (combStr.length() > 1) {
