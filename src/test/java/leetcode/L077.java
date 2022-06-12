@@ -43,6 +43,7 @@ public class L077 {
     }
 
     public void combine(List<List<Integer>> combs, List<Integer> comb, int start, int n, int k) {
+        print(combs, comb, start, n, k);
         if (k == 0) {
             combs.add(new ArrayList<>(comb));
             return;
@@ -53,4 +54,40 @@ public class L077 {
             comb.remove(comb.size() - 1);
         }
     }
+
+    int count = 0;
+    public void print(List<List<Integer>> combs, List<Integer> comb, int start, int n, int k) {
+        String combsStr = "[";
+        for (int i = 0; i < combs.size(); i++) {
+            combsStr += "[";
+            List<Integer> list = combs.get(i);
+            for (int j = 0; j < list.size(); j++) {
+                combsStr += j + ", ";
+            }
+            combsStr = combsStr.substring(0, combsStr.length() - 2);
+            combsStr += "], ";
+        }
+        if (combsStr.length() > 2) {
+            combsStr = combsStr.substring(0, combsStr.length() - 2);
+        }
+        combsStr += "]";
+
+        String combStr = "[";
+        for (int j = 0; j < comb.size(); j++) {
+            combStr += j + ", ";
+        }
+        if (combStr.length() > 1) {
+            combStr = combStr.substring(0, combStr.length() - 2);
+        }
+        combStr += "]";
+        System.out.println(String.format("count: %d", count));
+        System.out.println(String.format("combs: %s", combsStr));
+        System.out.println(String.format("comb: %s", combStr));
+        System.out.println(String.format("start: %d", start));
+        System.out.println(String.format("n: %d", n));
+        System.out.println(String.format("k: %d", k));
+        System.out.println();
+        count++;
+    }
+
 }
