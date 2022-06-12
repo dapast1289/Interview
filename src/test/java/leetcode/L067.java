@@ -17,7 +17,8 @@ public class L067 {
         return Stream.of(
                 Arguments.of("11", "1", "100"),
                 Arguments.of("1010", "1011", "10101"),
-                Arguments.of("1111", "1", "10000"));
+                Arguments.of("1111", "1", "10000")
+        );
     }
 
     @ParameterizedTest

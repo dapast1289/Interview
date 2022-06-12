@@ -1,10 +1,18 @@
 package leetcode;
 
+import org.junit.jupiter.params.provider.Arguments;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class L077 {
 
+    private static Stream<Arguments> arrayStream() {
+        return Stream.of(
+
+        );
+    }
 
     public static List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> combs = new ArrayList<List<Integer>>();
