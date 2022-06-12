@@ -41,15 +41,16 @@ public class L077 {
         combine(combs, new ArrayList<>(), 1, n, k);
         assertEquals(expected, combs);
     }
+
     public void combine(List<List<Integer>> combs, List<Integer> comb, int start, int n, int k) {
-        if(k==0) {
+        if (k == 0) {
             combs.add(new ArrayList<>(comb));
             return;
         }
-        for(int i=start;i<=n;i++) {
+        for (int i = start; i <= n; i++) {
             comb.add(i);
-            combine(combs, comb, i+1, n, k-1);
-            comb.remove(comb.size()-1);
+            combine(combs, comb, i + 1, n, k - 1);
+            comb.remove(comb.size() - 1);
         }
     }
 }
