@@ -1,4 +1,4 @@
-package designPatter.creatinal.abstractFactory;
+package designPatter.creatinal.factory.bean;
 
 public abstract class Computer {
 
@@ -8,7 +8,6 @@ public abstract class Computer {
 
     public abstract String getCPU();
 
-    @Override
     public String toString() {
         return "RAM= " + this.getRAM() + ", HDD=" + this.getHDD() + ", CPU=" + this.getCPU();
     }

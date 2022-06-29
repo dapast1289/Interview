@@ -1,4 +1,7 @@
-package designPatter.creatinal.abstractFactory;
+package designPatter.creatinal.abstractFactory.abstractFactory;
+
+import designPatter.creatinal.abstractFactory.bean.Computer;
+import designPatter.creatinal.abstractFactory.bean.Server;
 
 public class ServerFactory implements ComputerAbstractFactory {
     private String ram;

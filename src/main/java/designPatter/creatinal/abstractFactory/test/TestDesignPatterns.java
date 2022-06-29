@@ -1,4 +1,9 @@
-package designPatter.creatinal.abstractFactory;
+package designPatter.creatinal.abstractFactory.test;
+
+import designPatter.creatinal.abstractFactory.abstractFactory.ComputerFactory;
+import designPatter.creatinal.abstractFactory.abstractFactory.PCFactory;
+import designPatter.creatinal.abstractFactory.abstractFactory.ServerFactory;
+import designPatter.creatinal.abstractFactory.bean.Computer;
 
 public class TestDesignPatterns {
 

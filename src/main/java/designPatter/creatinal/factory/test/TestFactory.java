@@ -1,4 +1,7 @@
-package designPatter.creatinal.factory;
+package designPatter.creatinal.factory.test;
+
+import designPatter.creatinal.factory.bean.Computer;
+import designPatter.creatinal.factory.factory.ComputerFactory;
 
 public class TestFactory {
 

@@ -1,4 +1,8 @@
-package designPatter.creatinal.factory;
+package designPatter.creatinal.factory.factory;
+
+import designPatter.creatinal.factory.bean.Computer;
+import designPatter.creatinal.factory.bean.PC;
+import designPatter.creatinal.factory.bean.Server;
 
 public class ComputerFactory {
 

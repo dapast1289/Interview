@@ -1,4 +1,6 @@
-package designPatter.creatinal.abstractFactory;
+package designPatter.creatinal.abstractFactory.abstractFactory;
+
+import designPatter.creatinal.abstractFactory.bean.Computer;
 
 public class ComputerFactory {
 
