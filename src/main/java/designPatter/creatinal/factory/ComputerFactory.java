@@ -1,4 +1,4 @@
-package designPatter.creatinal.factoryMethod;
+package designPatter.creatinal.factory;
 
 public class ComputerFactory {
 
