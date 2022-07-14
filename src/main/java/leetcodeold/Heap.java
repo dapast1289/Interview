@@ -1,6 +1,4 @@
-package leetcode;
-
-import java.util.Arrays;
+package leetcodeold;
 
 public class Heap {
 

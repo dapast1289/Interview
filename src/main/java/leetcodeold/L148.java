@@ -1,6 +1,4 @@
-package leetcode;
-
-import java.util.List;
+package leetcodeold;
 
 public class L148 {
 

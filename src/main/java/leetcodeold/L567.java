@@ -1,6 +1,4 @@
-package leetcode;
-
-import java.util.LinkedList;
+package leetcodeold;
 
 public class L567 {
 
